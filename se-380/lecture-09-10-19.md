@@ -79,3 +79,7 @@ sense -----> compute ------> actuate
 - good = simple but accurate
 - no model is perfet
 - complexity trade-off - design (simple) vs. simulation (complex)
+
+##### Example (Damper)
+
+![](/assets/Screenshot from 2018-09-10 12-39-11.png)
