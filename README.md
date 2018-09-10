@@ -1,4 +1,4 @@
-# Classnotes for Fall 2018 - SE 2020
+# Class Notes for Fall 2018 - SE 2020
 
 #### Courses:
 
