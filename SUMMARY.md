@@ -8,6 +8,7 @@
   * [Lecture 09-11-18](cs348/lecture-09-11-18.md)
 * [SE 464](se464.md)
   * [Lecture 09-11-18](lecture-09-11-18.md)
+  * [Lecture 09-13-18](lecture-09-13-18.md)
 * [CS 343](cs-343.md)
   * [Lecture 09-11-18](cs-343/lecture-09-11-18.md)
 
