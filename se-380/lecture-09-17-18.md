@@ -173,4 +173,33 @@ $$
 
 $$D=\frac{\partial h}{\partial u}|_{x=\bar{x}, u=\bar{u}}=0$$
 
-3)
+3) Linearized modle
+
+$$\delta \dot x=\begin{bmatrix}
+0 & 1\\
+\frac{1+5g}{\ell} & 0
+\end{bmatrix} dx +
+\begin{bmatrix}
+0\\
+\frac{3}{M\ell^2}
+\end{bmatrix}du
+$$
+
+$$\delta y=\begin{bmatrix}
+1 & 0
+\end{bmatrix}\delta x
++\begin{bmatrix}
+0
+\end{bmatrix} \delta u
+$$
+
+$$dx(t)=\begin{bmatrix}
+x_1(t)\\
+x_2(t)
+\end{bmatrix}-
+\begin{bmatrix}
+\pi\\
+0
+\end{bmatrix}, du(t)=u(t)-0$$
+
+Read Section 2.7
