@@ -1,49 +1,23 @@
-### Syntactic Convenience
+### Ex. 2.8
 
-Operators:
+![](/assets/Screenshot from 2018-09-18 11-41-01.png)
 
-$$=, \leq, \geq, >, <$$
+- When E5 is thrown, it searches through B6 to see if there's a handler, but there is none in B6.
+- B5 has no handler
+- It finds C5 in B4, and there's a match, the exception is caught.
+- C5 throws exception, it continues onto C7, and gets caught at C8
 
+### Difference between uC++ and C++ in throw
+- In C++ the base class is thrown even when a derived class is passed in
+- In uC++ the derived class is thrown
+- Check **page 22** in the notes for more details
 
-$$x=y$$
+**The resumption handler** cannot perform a break, continue or return
+    - Since it's a corrective actions so computation can continue
+    - Should throw an exception if correction is not possible
+    
+### Coroutine
 
-x op y
-
-- Can be both variables and constants
-
-$$\{(snum)|\exists x_1, x_2 . STUDENT(snum, x_1, x_2)\}\equiv
-\{(snum)|\exists x_1, x_2 . STUDENT(snum, -, -)\}$$
-
-### Sample Queries (From Slide)
-
-##### Bibliography Database
-- List titles of publications written by a single author
-
-$$\{(t) | \exists pid(PUBLICATION(pid, t)\wedge
-\neg\exists a_1.(WROTE(pid, a1))\wedge\neg(a1=a)\}$$
-
-### Integrity Constraints
-- yes/no conditions that must be true in every valid database instance
-
-#### Ex. Every Boss is an Employee
-- Check slide for initial query. They are equivalent to
-
-$$\equiv\forall x, y, z(\neg EMP(x, y, z)\vee EMP(z, -, -))$$
-$$\equiv \neg \exists x, y, z\neg(\neg EMP(x, y, z)\vee EMP(z, -, -))$$
-$$\equiv \neg exists x (EMP(x, -, -)\wedge \neg EMP(z, -, -))$$
-
-### Disjoint Relationships
-- e.g. Books and journals
-
-$$\neg \exists x.(BOOK(x, -, -)\wedge JOURNAL(x, -, -, -))$$
-$$\forall x.(PUB(x, -)\rightarrow(BOOK(x, -, -)\vee ...))$$
-
-### Views
-- Answers to queries can be used to define derived relations
-- Tables in SQL is a view
-
-
-### Domain Independence
-- A query is domain independent if it evaluates to the same value in any pairs of two database instances (See slide for formal definition)
-
-- A query that is domain independent is safe
+- A coroutine has it's own stack to cache information in order to resume after the context switches back to itself
+- Coroutine is sequential (not concurrent)
+- A coroutine can be terminated in suspension, but it has to be responsible to clean up everything on the stack by calling all the destructors
