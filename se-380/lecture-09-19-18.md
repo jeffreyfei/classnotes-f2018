@@ -80,7 +80,7 @@ $$G(s)=C(sI-A)^{-1}B+D$$
 
 Recall linearlized model of pendulum at upright position $$(\bar x, \bar u)=(\begin{bmatrix}\pi \\ 0\end{bmatrix}, 0)$$
 
-$$\begin{bmatrix}
+$$
 \dot \delta x=\begin{bmatrix}
 0 & 1\\
 \frac{1.5g}{\ell} & 0
