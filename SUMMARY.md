@@ -8,6 +8,7 @@
   * [Tutorial 09-14-18](se-380/tutorial-09-14-18.md)
   * [Lecture 09-17-18](se-380/lecture-09-17-18.md)
   * [Lecture 09-19-18](se-380/lecture-09-19-18.md)
+  * [Lecture 09-21-18](se-380/lecture-09-21-18.md)
 * [CS 348](cs-348.md)
   * [Lecture 09-11-18](cs-348/lecture-09-11-18.md)
   * [Lecture 09-18-18](cs-348/lecture-09-18-18.md)
