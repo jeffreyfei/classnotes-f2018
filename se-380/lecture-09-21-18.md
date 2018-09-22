@@ -19,7 +19,13 @@ $$\Rightarrow\frac{Y(s)}{U(s)}=\frac{G_2G_{ff}+G_2G_1}{1+G_1(s)G_2(s)}$$
 
 i) Move $$G_1$$ to the left
 
+![](/assets/Screenshot from 2018-09-21 22-24-17.png)
+
 ii) Swap order of summing nodes
+
+![](/assets/Screenshot from 2018-09-21 22-32-35.png)
+
+$$Y(s)=(G_1+G_{ff})(\frac{G_2}{1+G_1G_2})U(s)$$
 
 ### Systematic Method
 
@@ -28,7 +34,7 @@ ii) Swap order of summing nodes
 3) Write equation for each summer and $$y$$
 4) Eliminate $$\{v_1, v_2,...\}$$
 
-![](/assets/New Doc 2018-09-21 10.57.03.jpg)
+![](/assets/Screenshot from 2018-09-21 22-42-48.png)
 
 Steps 3
 
