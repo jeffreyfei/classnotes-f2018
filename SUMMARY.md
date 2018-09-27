@@ -27,4 +27,5 @@
   * [Lecture 09-18-18](cs-343/lecture-09-18-18.md)
   * [Lecture 09-20-18](cs-343/lecture-09-20-18.md)
   * [Lecture 09-25-18](cs-343/lecture-09-25-18.md)
+  * [Lecture 09-27-18](cs-343/lecture-09-27-18.md)
 
