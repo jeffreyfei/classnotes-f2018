@@ -9,7 +9,7 @@
 - If $$G(s)$$ er, and not strictly proper,  then use long division to write
     $$G(s)=G_1(s)+const$$, $$G_1$$ strictly proper
     
-- Impulse response is $$g(t)=g_1(t)+constant\cdot \underbrace{\delta(t)}_{impulse}$$
+- Impulse response is $$g(t)=g_1(t)+constant\cdot \delta(t)$$
 
 - Theorem remains true with (ii), changed to $$g_1$$ absolutely integrable
 
