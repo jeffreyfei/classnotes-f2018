@@ -23,7 +23,7 @@ $$G(s)=\frac{(s+1)(s+2)}{(s+3)(s+4)}=\frac{-4s-10}{(s+3)(s+4)}+1$$
 
 ##### Proof:
 
-Write $$G(s)=\underbrace{G_1(s)}_{strictly~{}proper}+\underbrace{G_2(s)}_{polynomial~{}in~{}s}$$
+Write $$G(s)=G_1(s)+G_2(s)$$
 
 So $$Y(s)=G_1(s)U(s)+G_2(s)U(s)$$
 
@@ -43,7 +43,7 @@ $$y=Cx+Du$$
 ##### ss2tf:
 
 $$Y(s)=[C(sI-A)^{-1}B+D]U(s)$$
-$$=[C\frac{\overbrace{adj(sI-A)}^{nxn~{}matrix}}{\underbrace{\det(sI-A)}}_{nth~{}order~{}polynomial}B+D]U(s)$$
+$$=[C\frac{adj(sI-A)}{\det(sI-A)}B+D]U(s)$$
 
 eigenvalues of $$A=$$ roots of $$\det(sI-A)\supseteq$$ poles of TF
 
