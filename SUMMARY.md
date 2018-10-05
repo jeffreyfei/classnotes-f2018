@@ -14,6 +14,7 @@
   * [Lecture 09-28-18](se-380/lecture-09-28-18.md)
   * [Lecture 10-01-18](se-380/lecture-10-01-18.md)
   * [Lecture 10-03-18](se-380/lecture-10-03-18.md)
+  * [Lecture 10-05-17](se-380/lecture-10-05-17.md)
 * [CS 348](cs-348.md)
   * [Lecture 09-11-18](cs-348/lecture-09-11-18.md)
   * [Lecture 09-18-18](cs-348/lecture-09-18-18.md)
