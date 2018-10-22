@@ -41,4 +41,5 @@
   * [Summary Notes - Midterm](se-464/summary-notes-midterm.md)
     * [02 - Architecture](se-464/summary-notes-midterm/02-architecture.md)
     * [03 - Views & Non-functional Properties](se-464/summary-notes-midterm/03-views-and-non-functional-properties.md)
+    * [04 - Architectural Styles](se-464/summary-notes-midterm/04-architectural-styles.md)
 
