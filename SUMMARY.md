@@ -40,4 +40,5 @@
   * [Lecture 09-20-18](se-464/lecture-09-20-18.md)
   * [Summary Notes - Midterm](se-464/summary-notes-midterm.md)
     * [02 - Architecture](se-464/summary-notes-midterm/02-architecture.md)
+    * [03 - Views & Non-functional Properties](se-464/summary-notes-midterm/03-views-and-non-functional-properties.md)
 
