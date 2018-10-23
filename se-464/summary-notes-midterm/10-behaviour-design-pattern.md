@@ -1,4 +1,4 @@
-![](/assets/Screenshot from 2018-10-23 01-29-19.png)
+![](/assets/chart.png)
 
 **Visitor pattern** - Uses a visitor class to perform operations on an object
 - Define new operation without changing the classes of the elements on which it operates
