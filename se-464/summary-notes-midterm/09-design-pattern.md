@@ -23,3 +23,16 @@
 **Flyweight Pattern**
 - Use sharing to support large number of related objects
 - When a new object is requested, the factory tries to find an existing object that satisfies the requirement, if there isn't one then a new object is created
+
+**Visitor pattern** - Uses a visitor class to perform operations on an object
+- Define new operation without changing the classes of the elements on which it operates
+    - Create new visitor subclass
+    
+    
+**MVP** - Model View Presenter
+- Uses a presenter class (instead of controller) that glues the Model and the View together
+    - Houses application logic
+    - Updates View when Model changes, updates Model when user changes the View
+- Same as MVC with improve decoupling of Views and Model
+- Better Testability
+- More complex than MVC
