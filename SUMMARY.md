@@ -44,4 +44,5 @@
     * [04 - Architectural Styles](se-464/summary-notes-midterm/04-architectural-styles.md)
     * [06 - Architectural Modeling](se-464/summary-notes-midterm/06-architectural-modeling.md)
     * [07 - Security & Chrome](se-464/summary-notes-midterm/07-security-and-chrome.md)
+    * [08 - Design Introduction](se-464/summary-notes-midterm/08-design-introduction.md)
 
