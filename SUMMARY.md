@@ -38,9 +38,10 @@
   * [Lecture 09-13-18](se-464/lecture-09-13-18.md)
   * [Lecture 09-18-18](se-464/lecture-09-18-18.md)
   * [Lecture 09-20-18](se-464/lecture-09-20-18.md)
-  * [Summary Notes - Midterm](se-464/summary-notes-midterm.md)
+  * [Summary Notes](se-464/summary-notes-midterm.md)
     * [02 - Architecture](se-464/summary-notes-midterm/02-architecture.md)
     * [03 - Views & Non-functional Properties](se-464/summary-notes-midterm/03-views-and-non-functional-properties.md)
     * [04 - Architectural Styles](se-464/summary-notes-midterm/04-architectural-styles.md)
     * [06 - Architectural Modeling](se-464/summary-notes-midterm/06-architectural-modeling.md)
+    * [07 - Security & Chrome](se-464/summary-notes-midterm/07-security-and-chrome.md)
 
