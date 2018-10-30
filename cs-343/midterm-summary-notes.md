@@ -63,6 +63,36 @@
 ##### defaultResume
 - If no CatchResume is found, defaultResume is called, which rethrows the event, and the event will get caught by the next catch block (if it exists)
 
+## Coroutine
+
+- Has it's own stack and its local variables
+- When deleted, a coroutine's stack is always unwound and any destructors executed
+- Default coroutine stack size is 64K and does not grow
+- Expands to next stack instead of heap
+- Nonlocal exceptions are queued and delivered in FIFO order
+    - Disabled by default in a coroutine
+- Exception UnhandledException (and a few others) are always enabled
+
+- **this** and `uThisCoroutine` changes at different times
+
+### Coroutine Languages
+
+- **Stackless** - use the caller's stack and a fixed-size local-state
+    - Cannot call other routines then suspend (only suspend in the coroutine main)
+    - Python, Ruby, JavaScript, C# etc.
+
+
+- **Stackful** - separate stack and fixed-sized local-state
+
+## More Exceptions
+
+- **Derived exception types** - derived exception classes from a parent exception class
+    - Can form a tree like exception hierarchy
+    
+- Destructor is implicitly noexcept => cannot raise an exception
+
+- Cannot raise an exception during propagation
+
 ### Barging Avoidance
 
 ### Barging Prevention
