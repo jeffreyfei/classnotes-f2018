@@ -93,6 +93,95 @@
 
 - Cannot raise an exception during propagation
 
+## Concurrency
+
+- **Thread** - independent sequential execution  path through a program
+
+- **Process** - a program component that has its own thread and has the same state information as a coroutine
+
+- **Task** - similar to a process except that it is reduced along some particular dimension
+
+- Concurrency is possible on uniprocessor with context switching
+
+- **Task switching** may occur at non-deterministic program locations
+    - Can happen explicitly (e.g. calling routines)
+    - Can happen implicitly due to an external interrupt or timer
+    
+    
+- Interrupt is **preemptive** if it affect scheduling (execution order)
+
+#### Execution States
+
+![](/assets/Screenshot from 2018-10-30 18-52-26.png)
+
+running -> ready (timer alarm)
+blocked -> ready (completion of I/O operation)
+running -> halted (exceeding some limit e.g. CPU time, error)
+
+#### Threading Model
+
+- **kernel threads** - used by the OS to provide logical access to the CPU (virtual processors)
+- A process may have multiple kernel threads to provide parallelism on multiple CPUs
+
+##### Relationship between user:kernel:CPU
+
+![](/assets/Screenshot from 2018-10-30 18-58-11.png)
+
+- uC++ only has explicit concurrent mechanisms
+
+#### Speedup From Concurrency
+
+![](/assets/Screenshot from 2018-10-30 19-03-23.png)
+
+##### Amdahl's Law
+
+$$S_c=\frac{1}{(1-P)+P/C}$$
+
+where $$T_1=1, T_C=sequential+concurrent$$
+
+P - the concurrent section of the given program
+- Goal is minimize the sequential part of the program
+
+- Concurrent program is bound by the *critical path* of computation
+    - Longest path bounds speedup
+    
+- **Independent execution** - all threads created together and do not interact
+- **Dependent execution** - threads created at different times and interact
+
+- Also affected by scheduler
+    - Greedy scheduling, LIFO scheduling etc.
+    
+    
+- **Critical section** - a group of instruction on an associated object that must be performed atomically
+
+- **Mutual exclusion** - prevention of simultaneous execution of a critical section by multiple threads
+
+- Need to minimize the size of critical section to maximize concurrency
+
+- Avoid static variable in a concurrent program as it may be difficult to enforce mutual exclusion
+
+#### 5 Rules of Mutual Exclusion
+
+1. Only one thread can be in a critical section at a time with respect to a particular object
+2. Threads may run at arbitrary speed and in arbitrary order, while the underlying system guarantees threads makes progress
+3. If a thread is not in the entry or exit code controlling access to critical section, it may not prevent other threads from entering critical section
+4. In selecting a thread to enter the critical section, the selection cannot be postponed indefinitely (livelock)
+5. After a thread starts entry to the critical section, it must eventually enter (starvation)
+
+##### Dekker's Algorithm
+
+- **RW-safe** - works if simultaneous writes scramble bits and simultaneous read/write reads flickering bits
+
+- Dekker's algorithm is not RW safe
+- Hesselink version is RW safe
+
+- Dekker'shas unbounded overtaking since race loser retracts intent
+
+- Peterson's has bounded overtaking because race loser does not retracts intent
+
+- Peterson's is RW-unsafe and requires atomic read/write
+
+
 ### Barging Avoidance
 
 ### Barging Prevention
