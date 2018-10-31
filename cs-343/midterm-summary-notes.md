@@ -181,6 +181,15 @@ P - the concurrent section of the given program
 
 - Peterson's is RW-unsafe and requires atomic read/write
 
+## Locks
+
+- **Spin lock** - lock implemented using busy waiting
+
+- **Mutex lock** - used solely for mutual exclusion
+    - Single acquisition - can only be acquired once by a task
+    - Multiple acquisition - lock owner can acquire it multiple times (owner lock)
+    
+    
 
 ### Barging Avoidance
 
