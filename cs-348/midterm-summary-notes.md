@@ -74,3 +74,59 @@
     - in PSPACE
     - Can express NP-hard problems (encode SAT)
     
+
+## SQL
+
+#### Three parts of the language
+
+- **DML (Data Manipulation Language)**
+    - Query language
+    - Update language
+    
+    
+- **DDL (Data Definition Language)**
+    - Defines schema for relations
+    - Creates/modifies/destroys database objects
+    
+    
+- **DCL (Data Control Language)**
+    - Access control
+    
+- **Corelations** - tuple variables
+
+- **Atomic conditions** - =, !=, <, > etc.
+
+- **Boolean connectives** - AND, OR, NOT - combines atomic conditions
+
+
+#### Set Operations
+
+- **Relations** - answers to _SELECT_ blocks (sets of tuples)
+    - _Set operations_ can be applied
+    
+    
+- Set union: `UNION`
+- Set difference: `EXCEPT`
+- Set intersection: `INTERSECT`
+
+#### HAVING clause
+
+- The same as WHERE but for aggregate functions
+
+#### SELECT DISTINCT caluse
+
+- SQL is a multiset rather than a set
+- Use `SELECT DISTINCT` clause to eliminate duplicates
+
+- Add `ALL` to set operators to make them bag (multiset) operators
+    - e.g. `UNION ALL`
+    
+#### JOIN
+
+- `JOIN` - Inner Join; returns intersection of the two tables that satisfies the `ON` condition
+
+- `LEFT JOIN` - returns the rows of the table on the left, and the matching rows on the right table. Returns NULL if no match
+
+- `RIGHT JOIN` - same idea as LEFT
+
+- `OUTER JOIN` - returns all the rows from both sides, NULL if unmatched. Combination of left and right
