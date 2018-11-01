@@ -24,6 +24,7 @@
   * [Lecture 09-27-18](cs-348/lecture-09-27-18.md)
   * [Lecture 10-02-18](cs-348/lecture-10-02-18.md)
   * [Lecture 10-04-18](cs-348/lecture-10-04-18.md)
+  * [Midterm Summary Notes](cs-348/midterm-summary-notes.md)
 * [CS 343](cs-343.md)
   * [Lecture 09-11-18](cs-343/lecture-09-11-18.md)
   * [Lecture 09-13-18](cs-343/lecture-09-13-18.md)
