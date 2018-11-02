@@ -1,3 +1,39 @@
+## Introduction
+#### Three Level Schema Architecture
+1. External Schema (view)
+    - What the application programs and user see. May differ for different users of the same database
+
+2. Conceptual schema
+    - Description of all the logical structure of all data in the database
+    
+3. Physical schema
+    - Description of physical aspects (files, devices, storage algorithms etc.
+
+#### Data Independence
+
+- **Physical** - application immune to changes in storage structures
+- **Logical** - modularity; different tables are only accessed by a specialized application
+
+#### Transactions
+ - An application-specified atomic and durable unit of work
+ 
+ - Properties of transactions ensured by the DBMS
+     - **Atomic** - transaction occurs entirely, or not at all (non-divisible)
+     - **Consistency** - each transaction preservers the consistency of the db
+     - **Isolated** - concurrent transactions do not interfere with each other
+     - **Durable** - once completed, a transaction's changes are permanent
+     
+#### Interfacing to the DBMS
+
+- **Data Definition Language (DDL)**
+    - Specifying schemas
+    - May have different DDLs for different levels
+    
+- **Data Manipulation Language (DML)**
+    - Specifying retrieval and revision requests
+        - Navigational (procedural)
+        - Non-navigational (declarative)
+
 ## The Relational Model
 
 - All information is organized in (a finite number of) relations
@@ -239,3 +275,20 @@ select->sqlvar[i].sqlname.length
 select->sqlvar[i].sqlname.data
 select->sqlvar[i].sqltype
 ```
+
+## SQL ODBC
+
+- An interface built on library calls
+    - Applications developed without access to the DB
+    - Harder to use and doesn't allow preprocessing
+    
+- Three fundamental objects in an ODBC program
+    - Environments
+    - Connections
+    - Statements
+    
+    
+- CLI/ODBC can do everything Embedded SQL can
+- All statements are dynamic
+    - no precompilation
+    - explicit binding of parameters
