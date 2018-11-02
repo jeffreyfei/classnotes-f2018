@@ -130,3 +130,61 @@
 - `RIGHT JOIN` - same idea as LEFT
 
 - `OUTER JOIN` - returns all the rows from both sides, NULL if unmatched. Combination of left and right
+
+## Embedded SQL
+
+##### Advantages
+- Preprocessing of static parts
+- Easier to use
+
+##### Disadvantages
+- Needs precompiler
+- Needs to be _bound_ to a database
+
+```c
+    EXEC SQL INCLUDE SQLCA;
+    main() {
+        EXEC SQL BEGIN DECLARE SECTION;
+            char db[6] = "cs348"
+            int myVar1, myVar2;
+        EXEC SQL END DECLARE SECTION;
+        // Error handling
+        EXEC SQL WHENEVER SQLERROR GO TO error;        
+        // Connect
+        EXEC SQL CONNECT TO :db;
+        
+        // Some operation
+        
+        EXEC COMMIT;
+        EXEC SQL CONNECT reset;
+        exit(0);
+        
+        // Error handling code
+    error:
+        EXEC SQL WHENEVER SQL ERROR CONTINUE;
+        EXEC SQL ROLLBACK;
+        EXEC SQL CONNECT reset;
+    }
+```
+
+- If host variable is null in a SQL query the query will result in a runtime error
+
+#### CURSOR
+
+- Acts like an iterator, followed by a SELECT statement;
+- Can be used to iterate through all the rows returned by the SELECT statement
+
+```c
+EXEC SQL DECLARE names CURSOR FOR
+    SELECT name FROM author WHERE aid = :aid;
+    
+EXEC SQL open names;
+// break when all the items are fetched
+EXEC SQL WHENEVER NOT FOUND GO TO end;
+for (;;) {
+    EXEC SQL FETCH names INTO :name;
+    cout << name << endl;
+}
+end: 
+```
+
