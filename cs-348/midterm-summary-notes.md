@@ -292,3 +292,107 @@ select->sqlvar[i].sqltype
 - All statements are dynamic
     - no precompilation
     - explicit binding of parameters
+    
+    
+## E-R Modelling
+
+- Used for database (conceptual schema) design
+
+- Described as
+    - Entities
+    - Attributes
+    - Relationships
+    
+- **Entity** - A distinguishable object
+
+- **Entity set** - set of entities of the same type
+    - Student, flight
+    
+
+- **Attributes** - describe properties of entities
+    - StudentNum, StudentName, Major
+    
+
+- **Relationship** - representation of the fact that certain entities are related to each other
+
+- **Relationship set* - set of relationships of a given type
+    - Student registered in a course
+    - Passengers booked on flights
+    
+- **Role** - the function of an entity in a relationship team
+
+- **Role name** - an explicit indication of a role
+
+![](/assets/Screenshot from 2018-11-01 21-52-06.png)
+
+- Entities: Team, Location
+- Attributes: TeamName, Score, Address, LocName
+- Relations: Match
+- Roles: HomeTeam, Visitor
+
+- **Primary keys** - selection of attributes chosen by designer values of which determines the particular entity
+
+#### Relationship types
+
+- **many-to-many** (N:N) - an entity in one set can be related to many entities in the other
+
+- **many-to-one**  (N:1) - each entity in one set can be related at most one entity in the other, but an entity in the second may be related to many entities in the first
+
+- **one-to-many** (1:N)
+
+- **one-to-one** (1:1) - each entity in one set can be related at most one entity in the other, and vise versa
+
+#### Existence Dependency
+
+- **existence dependency** - when the existence of an entity depends on the existence of another entity
+    - If x is ED on y, then y is a **dominant entity** and x is a **subordinate entity**
+    
+    
+- **Weak entity set** - an entity set containing subordinate entities
+- **Strong entity set** - an entity set containing no subordinate entities
+
+- A _weak entity set_ must have a many-to-one relationship to a distinct entity set
+
+- **Discriminator** of a weak entity set - set of attributes that distinguish subordinate entities of the set, for a particular dominant entity
+    - Primary key for a weak entity set: discriminator + primary key of entity set for dominating entities
+    
+#### General Cardinality Constraints
+
+- General cardinality constraints determine lower and upper bounds on the number of relationships of a given relationship set in which a component entity may participate
+    - e.g. a student may take at least 3 courses and at most 5; a course may contain at least 6 students and at most 100
+    
+#### Structured Attributes
+
+- **Composite attributes** - composed of fixed number of other attributes
+    - Address can contain: Street, City, Province, PostalCode
+
+
+- **Multi-valued attributes** - attributes that are set valued
+    - An Employee may contain many Hobbies
+    
+#### Aggregation
+
+- Relationships can be viewed as higher-level entities
+
+- e.g. Student and Course with a EnrolledIn relationship can be viewed as an entity "Enrollment"
+
+#### Specialization
+
+- A specialized kind of entity set may be derived from a given entity set
+
+- Graduate students are students who have a supervisor and a number of degrees
+
+#### Generalization
+
+- Several entity sets can be abstracted by a more general entity set
+
+- Car and Truck can be categorized as Vehicle
+
+#### Disjointness
+
+- Specialized entity sets are usually disjoint but can be declared to have entities in common
+
+- By default specialized entities are disjoint
+    - A vehicle can't be both a car and a truck
+
+- We can declare them to overlap (e.g. utility vehicles)
