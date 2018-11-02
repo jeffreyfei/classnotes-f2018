@@ -188,3 +188,54 @@ for (;;) {
 end: 
 ```
 
+## Dynamic SQL
+
+- Execute a string as a SQL statement
+
+`EXEC SQL EXECUTE IMMEDIATE :string;`
+
+- Executes the query in :string
+- Does not return an answer nor contain parameters
+- Used for constant statements executed only once
+
+`EXEC SQL PREPARE stmt FROM :string;`
+
+- :string may return answers and may contain parameters
+- Can be used for repeatedly executed statements
+
+- Can use the parameter marker `?` in the string to denote a parameter, combined with USING keyword chained by the variables
+
+`EXEC SQL OPEN cname USING :var, :var2, :var2`
+
+#### SQLDA
+
+- A SQL description area that defines how a single tuple looks like, where are the data etc.
+- How the DBMS communicates with the application
+
+- A prepared statement can be _described_; the description is stored in the SQLDA structure
+
+`EXEC SQL DESCRIBE stmt INTO sqlda`
+
+- Can also be used to supply parameters and get the result
+
+`EXEC SQL EXECUTE stmt USING DESCRIPTOR :sqlda;`
+`EXEC SQL FETCH cname USING DESCRIPTOR :sqlda;`
+
+###### Declaration
+`struct sqlda * select;`
+
+###### Initialization
+```c
+    // Initialize with number of items
+    init_da(&select, i);
+    // Get size
+    i = select->sqld;
+```
+
+###### Access items
+
+```c
+select->sqlvar[i].sqlname.length
+select->sqlvar[i].sqlname.data
+select->sqlvar[i].sqltype
+```
