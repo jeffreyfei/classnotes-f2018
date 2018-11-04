@@ -38,3 +38,5 @@ sI-A & B\\
 \end{bmatrix}}{
 \det(sI-A)
 }$$
+
+- Internal stability is asymptotic stability of all the states in the system
