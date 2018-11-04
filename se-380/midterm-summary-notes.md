@@ -22,3 +22,19 @@ $$\delta y=C\delta x+D\delta u$$
 $$C:=\frac{\delta h}{\delta x}|_{(\bar x, \bar u)}$$
 
 $$D:=\frac{\delta  h}{\delta u}|_{(\bar x, \bar u)}$$
+
+#### Laplace Table
+
+![](/assets/Screenshot from 2018-11-03 22-33-02.png)
+
+![](/assets/Screenshot from 2018-11-03 22-34-03.png)
+![](/assets/Screenshot from 2018-11-03 22-34-14.png)
+
+#### Derived TF Function
+
+$$\frac{Y(s)}{U(s)}=\frac{\det\begin{bmatrix}
+sI-A & B\\
+-C & D
+\end{bmatrix}}{
+\det(sI-A)
+}$$
