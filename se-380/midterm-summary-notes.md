@@ -82,3 +82,11 @@ $$\frac{-4}{T_s}$$
 #### Eigenvalues
 
 $$\det (A-\lambda I_n)=0$$
+
+#### Matrix Exponential
+
+$$\mathcal L\{e^{At}\}=(sI-A)^{-1}$$
+
+#### Final Value Theorem
+
+$$\lim_{t\rightarrow\infty} f(t)=\lim_{s\rightarrow 0} sF(s)$$
