@@ -55,3 +55,6 @@ where $$G_{eq}$$ is the plant, $$H_{eq}$$ is the feedback
 - Find %OS by take the value of the actual peak and and stead state gain
 
 $$\%OS=\frac{y_{peak}-G_{ss}}{G_{ss}}$$
+
+- Solve $$\varepsilon$$ with the formula and $$\%OS$$
+- Solve $$\omega_n$$ using the peak to peak formula
