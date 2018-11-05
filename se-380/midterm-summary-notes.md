@@ -74,3 +74,11 @@ $$\omega_n\sqrt{1-\varepsilon^2}$$
 #### First Order System Allowable S-plane Region
 
 $$\frac{-4}{T_s}$$
+
+#### Asymptotic Stability
+
+![](/assets/Screenshot from 2018-11-04 23-10-26.png)
+
+#### Eigenvalues
+
+$$\det (A-\lambda I_n)=0$$
