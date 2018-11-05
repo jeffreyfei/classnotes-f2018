@@ -48,3 +48,10 @@ sI-A & B\\
 $$ G(t)=\frac{G_{eq}}{1+H_{eq} G_{eq}}$$
 
 where $$G_{eq}$$ is the plant, $$H_{eq}$$ is the feedback
+
+
+#### Find Second Order System
+
+- Find %OS by take the value of the actual peak and and stead state gain
+
+$$%OS=\frac{y_{peak}-G_{ss}}{G_{ss}}$$
