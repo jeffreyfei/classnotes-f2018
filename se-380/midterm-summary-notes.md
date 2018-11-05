@@ -58,3 +58,19 @@ $$\%OS=\frac{y_{peak}-G_{ss}}{G_{ss}}$$
 
 - Solve $$\varepsilon$$ with the formula and $$\%OS$$
 - Solve $$\omega_n$$ using the peak to peak formula
+
+#### Damping Ratio
+
+![](/assets/Screenshot from 2018-11-04 21-45-27.png)
+
+#### Steady-state Gain
+
+![](/assets/Screenshot from 2018-11-04 22-04-20.png)
+
+#### Oscillatory Frequency
+
+$$\omega_n\sqrt{1-\varepsilon^2}$$
+
+#### First Order System Allowable S-plane Region
+
+$$\frac{-4}{T_s}$$
