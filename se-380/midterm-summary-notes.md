@@ -32,6 +32,9 @@ $$D:=\frac{\delta  h}{\delta u}|_{(\bar x, \bar u)}$$
 
 #### Derived TF Function
 
+$$G(s)=C(sI-A)^{-1}B+D$$
+$$=C\frac{adj(sI-A)}{det(sI-A)}B+Dn$$
+
 $$\frac{Y(s)}{U(s)}=\frac{\det\begin{bmatrix}
 sI-A & B\\
 -C & D
@@ -40,3 +43,8 @@ sI-A & B\\
 }$$
 
 - Internal stability is asymptotic stability of all the states in the system
+
+#### Negative Feedback
+$$ G(t)=\frac{G_{eq}}{1+H_{eq} G_{eq}}$$
+
+where $$G_{eq}$$ is the plant, $$H_{eq}$$ is the feedback
