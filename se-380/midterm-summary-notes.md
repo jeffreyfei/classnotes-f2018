@@ -90,3 +90,7 @@ $$\mathcal L\{e^{At}\}=(sI-A)^{-1}$$
 #### Final Value Theorem
 
 $$\lim_{t\rightarrow\infty} f(t)=\lim_{s\rightarrow 0} sF(s)$$
+
+#### Bode Plots
+
+![](/assets/Screenshot from 2018-11-05 14-43-01.png)
