@@ -59,3 +59,5 @@ $$=: s^4+\alpha_3 s^3+\alpha_3 s^3 + \alpha_2 s^2+\alpha_1 s + \alpha_0, \alpha_
 - Equate coefficient of $$\pi$$ and $$\pi^{des}$$
 
 - Can place them into a matrix
+
+- If $$N_p$$ and $$D_p$$ are coprime, then equation has a unique solution
