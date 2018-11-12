@@ -20,6 +20,7 @@
   * [Midterm Help Session](se-380/midterm-help-session.md)
   * [Midterm Summary Notes](se-380/midterm-summary-notes.md)
   * [Lecture 11-09-18](se-380/lecture-11-09-18.md)
+  * [Lecture 11-02-18](se-380/lecture-11-02-18.md)
 * [CS 348](cs-348.md)
   * [Lecture 09-11-18](cs-348/lecture-09-11-18.md)
   * [Lecture 09-18-18](cs-348/lecture-09-18-18.md)
