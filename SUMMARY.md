@@ -55,4 +55,6 @@
     * [07 - Security & Chrome](se-464/summary-notes-midterm/07-security-and-chrome.md)
     * [08 - Design Introduction](se-464/summary-notes-midterm/08-design-introduction.md)
     * [09 - Design Pattern](se-464/summary-notes-midterm/09-design-pattern.md)
+* EARTH 121
+  * [Finals Summary Notes](finals-summary-notes.md)
 
