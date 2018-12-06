@@ -28,4 +28,20 @@ Internal stable $$\Rightarrow$$ Input output stable
 
 ### Closed-loop System Matrix
 
+$$\dot x_{cl}=\begin{bmatrix}
+\dot x_{p}\\
+\dot x_c
+\end{bmatrix}$$
+
 ![](/assets/Screenshot from 2018-12-05 21-38-42.png)
+
+### Routh-Hurtwitz
+
+- If polynomial is Hurwitz if all its roots lie in $$\mathbb C^-$$
+
+- We can determine that a polynomial has a bad root if there exists a coefficient that has a different sign as the coefficient of $$s^n$$ (zero always counts as different sign)
+
+##### Table construction
+- First two rows comes from the polynomal (alternating pattern)
+
+![](/assets/Screenshot from 2018-12-06 15-31-31.png)
