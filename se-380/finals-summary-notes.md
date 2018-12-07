@@ -53,3 +53,7 @@ $$\dot x_{cl}=\begin{bmatrix}
 ### Root-locus
 
 - The # of branches is the # of closed loop poles
+
+Let $$n$$ be the finite poles and $$m$$ be the finite zeroes
+
+![](/assets/Screenshot from 2018-12-07 07-34-59.png)
