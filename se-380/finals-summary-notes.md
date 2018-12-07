@@ -57,3 +57,10 @@ $$\dot x_{cl}=\begin{bmatrix}
 Let $$n$$ be the finite poles and $$m$$ be the finite zeroes
 
 ![](/assets/Screenshot from 2018-12-07 07-34-59.png)
+
+### Lead/Lag Controllers
+
+Specs:
+$$\Phi_{pm}$$, tracking => lead, lag
+
+$$\Phi_{pm}, \omega_{gc}$$ => lead

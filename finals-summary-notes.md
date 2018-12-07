@@ -23,3 +23,11 @@
 - Biosphere
     - Anthrosphere - study of humans
     - Asthenosphere - below lithosphere, flow as soft solid
+    
+### Module 2
+
+**Silicates** - minerals consists of silicon and oxygen and bounded with additional minerals
+    - Most abundant mineral in Earth's crust
+    - **Ferromagnesium silicate** - darker in colour (biotite)
+    - **Non-ferromagnesium silicate** - lighter in colour
+    - **Feldspar**
