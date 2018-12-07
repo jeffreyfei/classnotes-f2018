@@ -31,3 +31,5 @@
     - **Ferromagnesium silicate** - darker in colour (biotite)
     - **Non-ferromagnesium silicate** - lighter in colour
     - **Feldspar**
+    
+- Other less abundant minerals
