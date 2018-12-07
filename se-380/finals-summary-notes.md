@@ -6,6 +6,10 @@
 
 - A negative pole will bring stability as the inverse laplace of $$\frac{1}{s+a}$$ is $$e^{-at}$$
 
+### Error
+
+$$E(s)=\frac{1}{1+C(s)P(s)} R(s)$$
+
 ### BIBO Stablility
 
 - Every bounded input -> bounded out put
@@ -45,3 +49,7 @@ $$\dot x_{cl}=\begin{bmatrix}
 - First two rows comes from the polynomal (alternating pattern)
 
 ![](/assets/Screenshot from 2018-12-06 15-31-31.png)
+
+### Root-locus
+
+- The # of branches is the # of closed loop poles
