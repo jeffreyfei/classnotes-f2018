@@ -424,3 +424,19 @@ Biogenic
 - First abundant fossil evidence - Cambrian
 
 - Eon, era, period, epoch
+
+- **Dips-slip** - downward motion
+
+- **Strike-slip** - parallel motion
+
+- **Outrcrops** - sites where the rock is exposed at the surface
+
+- **Dip** - angle of inclination of a rock unit or fault
+
+- **Anticline** - oldest rock unit exposed in the center
+
+- **Normal** - a fault where the hanging wall has moved downward relative to the footwall
+
+- **Joint** - a fracture that shows no appreciable displacement
+
+- Most rocks deform by **Brittle failure**
