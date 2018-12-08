@@ -107,3 +107,49 @@ Chemical
 
 Biogenic
 ![](/assets/Screenshot from 2018-12-07 20-46-28.png)
+
+### Module 3
+
+- Geological time is determined base don rock sequences (stratigraphy) and calibrated in years using dating methods (geochronology)
+
+- Current Epoch: Holoscene
+- First appearance of reptiles: Paleozoic Era
+- Age of reptiles: Mesozoic Era
+
+### Module 4
+
+![](/assets/Screenshot from 2018-12-07 21-33-40.png)
+
+- Fossil fuels are formed during the carboniferous period
+
+##### Types of mineral deposits
+- Igneous
+- Metaphoric
+- Sedimentary
+- Residual or weathered
+
+##### Process that concentrates the minerals
+- Crystallization from agma
+- Precipitation from hydrothermal or hot water solutions
+- Concentration from lake water, seawater, flowing water in rivers
+- Concentration from weathering
+
+##### Category of Minerals
+
+- Metallic vs. Non-metallic
+    - Metallic
+        - Contains metal
+        - Igneous rocks
+        - Ductile
+        - Conductor of heat and electricity
+        - Can be extracted by smelting
+    - Non-metallic
+        - Does not contain metal
+        - No shine
+        - Sedimentary rocks
+        - Not ductile
+     
+           
+- Aggregate
+    - Non-metallic and nonrenewable
+    - Used in construction
