@@ -307,6 +307,29 @@ Biogenic
 - **Porphyritic-aphaitic**
     - Created by a period of slow cooling and eruption of the magma and more rapid cooling
 
+
 - **Plutons** - the structure that result from the emplacement of igneous material at depth
 
 - **Stoping** - the upward movement of a magma body accomplished by the host rock being incorporated into the magma
+
+- Magma's **viscosity** is related to its silica content
+
+- Most abundant gas during volcanic eruption: **water vapour**
+
+- Pyroclastic materials include
+    - Cinders
+    - Ash
+    - Pumice
+    - Bombs
+    
+    
+
+- Shield vocano
+    - Primarily basaltic lava flows
+    
+    
+- **Low-viscosity magma** produces more passive eruption
+
+- **Lahar** - destructive volcanic mudflow
+
+- Most important agent of chemical weathering: **water**
