@@ -252,3 +252,37 @@ Biogenic
 
 - **Moraines** in Southern Ontario filters the ground waters and helps the water to enter the subsurface
     - Also called **recharge areas**
+    
+
+### Concepts
+
+- **Uniformitarianism** - the physical, chemical, and biologic laws
+
+- Theory of Earth by James Hutton is the begin of modern geology
+
+- Plate boundaries: divergent, convergent, transform
+
+- Greek translation of geology: Earth discourse, or the study of Earth
+
+- Similar crystalline structure => similar internal atomic arrangement
+
+- 98% of Earth's continental crust: O, Si, Al, Fe, Ca, Na, K, Mg
+
+- Muscovite and biotite have different major cations
+
+- The **nonsilicate minerals** are classed by crystal structure and bond types, causing them to exhibit similar physical properties.
+
+- Most abundant silicate is Feldspar
+
+- Ferromagnesian silicates have higher specific gravity
+
+- The structure of micas is Sheets of silicate tetrahedra
+
+- **Polymorphs** - a mineral that have the same chemical composition but different structure
+
+- **Texture of igneous rock** is determined by the rate that the magma cools
+    - Phaneritic - slowly cooled
+    
+- Olivine - highest crystallization temperature
+
+- **Granite** contains the greatest amount of quartz
