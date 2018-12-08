@@ -333,3 +333,86 @@ Biogenic
 - **Lahar** - destructive volcanic mudflow
 
 - Most important agent of chemical weathering: **water**
+
+- Chemical weathering of **silicate materials** produces clay minerals
+
+- **Regolith** - the layuer of rock and mineral fragments produced by weathering
+
+- **Climate** is the most important factor controller **soil formation**
+
+- **Clay** is the most common product of the hydrolysis of silicate minerals
+
+- **Limonite** - an oxide produced by iron bearing minerals
+
+- **Spheroidal** - weathering that "rounds" a rock
+
+- Granite is the most ideal foundation base for tropical homes
+
+- **Exfoliation** - rounded layers of rock have been removed by weathering
+
+- **Gnamma** - traps rainwater, speeds up the weathering process
+
+- Minerals crystallizing at lower temperature will be more resistant to weathering than crystallizing at higher temperatures
+
+- **Humus** - important source of nutrients for plants and retains water
+
+- Soil development progress more rapidly when unconsolidated material is the parent material
+
+- The E horizon: leaching and eluviation - contains little organic matter; light coloured
+
+- Sheet erosion => rills => gullies, streams
+
+
+- Sedimentary rock formation
+    - weather => erosion => deposition => compaction => cementation
+    
+    
+- **Particle size** is the primary basisto classify **Detrital sedimentary rocks**
+
+- **Mineral composition** is used to classify chemical sedimentary rocks
+
+- **Shale**
+    - primarily composed of silt and clay
+    - Likely to be found in deep water
+
+- **Sandstone** - primarily composed of quartz
+
+- **Evaporite deposits**
+    - Halite
+    - Sodium chloride
+    - Syvite
+    - Gypsum
+    
+- **Chert**
+    - Consists of microcystalline silica
+    
+- **Bitumious** coal is considered a sedimentary rock
+
+- Turbidity is generally associated with graded beds
+
+- Erosion of granite produce sandstone and conglomerate
+
+- **Diagenesis** - change sin sediment or a rock during and after lithification
+
+- **Tidal flat** - a transitional sedimentary environment
+
+- **Metamorphism** - to change form
+
+- **Micas** form foliated mineral patterns in typical schist
+
+- **Index materials** - form at a certain temperatures in the metamorphic zones
+
+- **Blueschist and eclogites** form in subduction zones
+
+- **Slate** - forms when shale is subjected to low-grade metamorphism
+    - 300C, 10km
+
+- **Foliation** - layered or banded texture; occurs when mineral is subjected to pressure
+
+- **Gneissic texture** - segregation of minerals into separate bands; high grade metamorphism
+
+- **Sillimanite** - most associated with high-grade metamorphism
+
+- **Shield** - area of exposed ancient metamorphic rocks
+
+- **Migmatite** - a rock that has been metamorphosed to such degrees that it has partially melted
