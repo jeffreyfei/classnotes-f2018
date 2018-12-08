@@ -230,3 +230,20 @@ Biogenic
 - **Laurentide ice sheet** - the ice sheet that shaped Canada during the last ice age
 
 **Moraine** - a landform or pile of sediment commonly composed of till deposited by a glacier
+
+#### Soil
+
+- **Hygroscopic water** - water tightly bound to the outer surface of soil particles that's not available for plant growth
+
+
+- **Gravitational water** - water that exists in soil with large pores; drains quickly
+
+
+- **Capillary water** - water that exists in soil with smaller pore
+    - Accessible for plant growth
+    
+    
+- Loam contains the most available water for plant growth
+    - More clay => more hygroscopic water
+    - More sand => more gravitational water
+    - The key is to find a balance
