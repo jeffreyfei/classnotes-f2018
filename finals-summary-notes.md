@@ -177,8 +177,6 @@ Biogenic
 
 **Stromatolite** - communities of microorganisms that baffle, trap, and precipitate particles into microbial mats in shallow water environment
 
-**Aquitard** - a impermeable body of rock or sediment that hinders or prevents groundwater movement and cannot be extracted for use by humans
-
 - 3% fresh water, 2% locked in glaciers
 
 #### Water
@@ -247,3 +245,10 @@ Biogenic
     - More clay => more hygroscopic water
     - More sand => more gravitational water
     - The key is to find a balance
+    
+#### Ground Water
+
+**Aquitard** - a impermeable body of rock or sediment that hinders or prevents groundwater movement and cannot be extracted for use by humans
+
+- **Moraines** in Southern Ontario filters the ground waters and helps the water to enter the subsurface
+    - Also called **recharge areas**
