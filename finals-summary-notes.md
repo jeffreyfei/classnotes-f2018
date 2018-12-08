@@ -440,3 +440,31 @@ Biogenic
 - **Joint** - a fracture that shows no appreciable displacement
 
 - Most rocks deform by **Brittle failure**
+
+- Reid's elastic rebound theory - mostly accepted Earthquake theory
+
+- **Basalt** transmit seismic waves most rapidly
+
+- S waves cannot travel through liquids
+
+- P waves travel through Earth's core
+
+- **Mohorovicic discontinuity** - seismic boundary between the crust and mantle
+
+- Core mantle boundary: 2900km
+
+- **Grade beds** - turbidite sequences
+
+- **Sinking sea** concept - Charles Darwin
+
+- **Continental rise** - when continental slope merges into a more gradual incline
+
+- **Continental shelf** - 80km wide and 130 meters deep
+
+- Component of **passive continental margin**
+    - Shelf break
+    - Continental shelf
+    - Continental rise
+    - Continental slope
+    
+- **Ophiolite complex** - structure of the ocean floor
