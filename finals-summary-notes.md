@@ -153,3 +153,12 @@ Biogenic
 - Aggregate
     - Non-metallic and nonrenewable
     - Used in construction
+    
+### Module 5
+
+- **Modified Mercalli Intensity Scale** - earthquake intensity scale with 12 categories of ground shaking and structure damage
+
+- **Moment Magnitude** - a numerical measure with 10 categories of the amount of energy released by an earthquake
+
+- **Mass movement** - any type of downslope movement of earth's materials
+![](/assets/Screenshot from 2018-12-07 22-02-35.png)
