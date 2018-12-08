@@ -177,12 +177,6 @@ Biogenic
 
 **Stromatolite** - communities of microorganisms that baffle, trap, and precipitate particles into microbial mats in shallow water environments
 
-**Topography** - the relief of elevation of exposed continental land surface above a reference elevation or datum such as mean sea level in the ocean
-
-**Bathymetry** - the depth of water below a reference elevation or datum such as mean sea level in the ocean
-
-**Hypsographic Curve** - a plot of cumulative area on the Earth's surface that occurs at various elevations relative to 
-
 **Firn** - Granular re-crystallized snow
 
 **Alpine glacier** - a mass of glacial ice in elevated terrian or mountains that descends down valleuys
@@ -192,3 +186,32 @@ Biogenic
 **Aquitard** - a impermeable body of rock or sediment that hinders or prevents groundwater movement and cannot be extracted for use by humans
 
 - 3% fresh water, 2% locked in glaciers
+
+#### Water
+- causes rock to melt at lower temperatures
+- bound within certain crystal structure of minerals
+- contributes to concentration of minerals
+- breaks down raw material
+- initiates movement of materials
+- destroys and builds landforms
+
+
+- First water on Earth is created by outgassing
+
+- **Biospheric Reservoir** - water stored in living organisms
+
+- **Atmospheric Reservior** - Water stored in the atmosphere
+    - Mostly in the troposphere
+    
+    
+- **Geospheric Reservior** - water stored on Earth's surface and inside the Earth
+
+#### Oceans
+
+**Topography** - the relief of elevation of exposed continental land surface above a reference elevation or datum such as mean sea level in the ocean
+
+**Bathymetry** - the depth of water below a reference elevation or datum such as mean sea level in the ocean
+
+**Hypsographic Curve** - a plot of cumulative area on the Earth's surface that occurs at various elevations relative to 
+
+- More water in Southern than Northern hemisphere
