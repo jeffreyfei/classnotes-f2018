@@ -162,3 +162,9 @@ Biogenic
 
 - **Mass movement** - any type of downslope movement of earth's materials
 ![](/assets/Screenshot from 2018-12-07 22-02-35.png)
+
+- Classifying faults
+    - Strike
+    - Dip
+    - Hanging wall
+    - Footwall
