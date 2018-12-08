@@ -175,13 +175,7 @@ Biogenic
 
 ### Module 6
 
-**Stromatolite** - communities of microorganisms that baffle, trap, and precipitate particles into microbial mats in shallow water environments
-
-**Firn** - Granular re-crystallized snow
-
-**Alpine glacier** - a mass of glacial ice in elevated terrian or mountains that descends down valleuys
-
-**Moraine** - a landform or pile of sediment commonly composed of till deposited by a glacier
+**Stromatolite** - communities of microorganisms that baffle, trap, and precipitate particles into microbial mats in shallow water environment
 
 **Aquitard** - a impermeable body of rock or sediment that hinders or prevents groundwater movement and cannot be extracted for use by humans
 
@@ -215,3 +209,24 @@ Biogenic
 **Hypsographic Curve** - a plot of cumulative area on the Earth's surface that occurs at various elevations relative to 
 
 - More water in Southern than Northern hemisphere
+
+#### Rivers / Lakes
+
+- Great lakes contains 20% of Earth's surface fresh water
+- Waterloo is in the Lake Erie drainage basin
+
+#### Ice / Snow
+
+**Firn** - Granular re-crystallized snow
+    - Transition period between snow and glacial ice
+
+**Alpine glacier** - a mass of glacial ice in elevated terrain or mountains that descends down valleys
+
+- Only two surviving ice sheet since last ice age: Greenland, Antarctica
+    - Greenland ice sheets has thicker layers than Antarctica ice sheets (more details but less extent of time)
+    
+- Last glaciation happened during the Pleistocene epoch
+
+- **Laurentide ice sheet** - the ice sheet that shaped Canada during the last ice age
+
+**Moraine** - a landform or pile of sediment commonly composed of till deposited by a glacier
