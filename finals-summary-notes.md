@@ -468,3 +468,13 @@ Biogenic
     - Continental slope
     
 - **Ophiolite complex** - structure of the ocean floor
+
+- Volcanic island arcs are produced by **linear trenches**
+
+- Continental drift is proposed by Alfred Wegener
+
+- **Polar wandering** - the apparent movement of Earth's magnetic poles overtime
+
+- **Water gap** - a steep-walled notch cut through a tectonic structure
+
+- **Discharge** - the stream's cross-section area multiplied by its velocituy
