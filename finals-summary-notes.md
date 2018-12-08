@@ -168,3 +168,17 @@ Biogenic
     - Dip
     - Hanging wall
     - Footwall
+    
+##### Characteristics of Volcanoes
+
+![](/assets/Screenshot from 2018-12-07 23-30-00.png)
+
+### Module 6
+
+**Stromatolite** - communities of microorganisms that baffle, trap, and precipitate particles into microbial mats in shallow water environments
+
+**Topography** - the relief of elevation of exposed continental land surface above a reference elevation or datum such as mean sea level in the ocean
+
+**Bathymetry** - the depth of water below a reference elevation or datum such as mean sea level in the ocean
+
+**Hypsographic Curve** - a plot of cumulative area on the Earth's surface that occurs at various elevations relative to 
