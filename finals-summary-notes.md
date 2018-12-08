@@ -182,3 +182,13 @@ Biogenic
 **Bathymetry** - the depth of water below a reference elevation or datum such as mean sea level in the ocean
 
 **Hypsographic Curve** - a plot of cumulative area on the Earth's surface that occurs at various elevations relative to 
+
+**Firn** - Granular re-crystallized snow
+
+**Alpine glacier** - a mass of glacial ice in elevated terrian or mountains that descends down valleuys
+
+**Moraine** - a landform or pile of sediment commonly composed of till deposited by a glacier
+
+**Aquitard** - a impermeable body of rock or sediment that hinders or prevents groundwater movement and cannot be extracted for use by humans
+
+- 3% fresh water, 2% locked in glaciers
