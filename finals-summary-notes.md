@@ -286,3 +286,27 @@ Biogenic
 - Olivine - highest crystallization temperature
 
 - **Granite** contains the greatest amount of quartz
+    - Phenoscryst consists of potassium feldspar in porphyritic granite
+    - Felsic: rocks with granitic composition
+    - Biotite mica: black mineral in granite
+    - Most likely minerals: plagiosclase feldspar, potassium feldspar, quartz
+
+- **Crystal settling** - the process by which minerals crystallize and settle out of a melt
+
+- **Basalt** 
+    - has asphanitic texture
+    - contain calcium rich feldspar
+    - Most of the oceanic crust
+    - xenoliths does not contain quartz
+
+- **Peridotite**
+    - ultramafic texture
+    - Majority of igneous rock in Earth's upper mantle
+    
+    
+- **Porphyritic-aphaitic**
+    - Created by a period of slow cooling and eruption of the magma and more rapid cooling
+
+- **Plutons** - the structure that result from the emplacement of igneous material at depth
+
+- **Stoping** - the upward movement of a magma body accomplished by the host rock being incorporated into the magma
