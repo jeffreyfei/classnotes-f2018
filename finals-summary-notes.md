@@ -416,3 +416,11 @@ Biogenic
 - **Shield** - area of exposed ancient metamorphic rocks
 
 - **Migmatite** - a rock that has been metamorphosed to such degrees that it has partially melted
+
+- **Law of superposition** - Nicolaus Steno, 1669
+
+- First 88% of Earth's history - Precambrian
+
+- First abundant fossil evidence - Cambrian
+
+- Eon, era, period, epoch
