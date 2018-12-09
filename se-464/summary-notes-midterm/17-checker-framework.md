@@ -38,3 +38,18 @@
 - A framework for pluggable type checkers
 
 - Guarantees the program satisfies the type property
+
+### Optional/Gradual Type Systems
+
+- TypeScript
+- Flow
+- Python 3
+
+### Newer PLs
+
+- Scala
+- Kotlin
+- F#
+- Swift
+- Julia
+- Reason
