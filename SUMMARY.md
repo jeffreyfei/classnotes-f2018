@@ -57,6 +57,7 @@
     * [09 - Design Pattern](se-464/summary-notes-midterm/09-design-pattern.md)
     * [14 - Dependency Injection](se-464/summary-notes-midterm/14-dependency-injection.md)
     * [16 - Cloud and Web Services](se-464/summary-notes-midterm/16-cloud-and-web-services.md)
+    * [17 - Checker Framework](se-464/summary-notes-midterm/17-checker-framework.md)
 * [EARTH 121](earth-121.md)
   * [Finals Summary Notes](finals-summary-notes.md)
 
