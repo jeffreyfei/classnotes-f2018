@@ -1,5 +1,7 @@
 # Checker Framework
 
+- Also includes 18, Part 2
+
 - Java's type system is weak
 
 ### Pluggable Type checking
@@ -53,3 +55,69 @@
 - Swift
 - Julia
 - Reason
+
+### Some Checker Syntax
+
+@Regex
+- Valid regular expression
+
+@Regex(2) - two capturing groups
+
+@NonNull - a non-null reference to data
+
+@Interned - an interned string (one instance)
+
+@English - an English string
+
+- Need library spec when annotating external libraries
+
+
+##### Facilities
+
+- Full tyep system
+- Generics
+- Qualifier defaults
+- Pre-/post-conditions
+- Warning supression
+
+##### Nullness Checker
+
+Prevent: NullPointerException
+
+Hold: @NonNull references always non-null
+
+Legal: Dereferences only on @NonNull References
+
+##### Regex Checker
+
+Prevent: PatternSyntaxException
+
+Hold: A string is a regex and number of groups
+
+Illegal: Pattern.compile with non regex
+
+
+##### Defining a Type System
+
+1. Qualifier hierarchy
+    - Defines subtyping
+
+2. Type introduction rules
+    - Types for expressions
+    - How a type is initializeda
+
+3. Type rules
+    - Checker-specific errors
+    
+4. Flow-refinements
+    - Better types than the programmer wrote
+    
+### Dataflow Framework
+
+Goal: Compute properties about expressions
+    - More accurate types than the user wrote
+
+Dataflow framework user provides
+    - What are we tracking
+    - What do operations do
+    - What are intermediate results
