@@ -55,7 +55,8 @@
     * [07 - Security & Chrome](se-464/summary-notes-midterm/07-security-and-chrome.md)
     * [08 - Design Introduction](se-464/summary-notes-midterm/08-design-introduction.md)
     * [09 - Design Pattern](se-464/summary-notes-midterm/09-design-pattern.md)
-    * 14 - Dependency Injection
+    * [14 - Dependency Injection](se-464/summary-notes-midterm/14-dependency-injection.md)
+    * [16 - Cloud and Web Services](se-464/summary-notes-midterm/16-cloud-and-web-services.md)
 * [EARTH 121](earth-121.md)
   * [Finals Summary Notes](finals-summary-notes.md)
 
