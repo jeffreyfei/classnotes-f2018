@@ -64,3 +64,11 @@ Specs:
 $$\Phi_{pm}$$, tracking => lead, lag
 
 $$\Phi_{pm}, \omega_{gc}$$ => lead
+
+### PID Controller
+
+![](/assets/Screenshot from 2018-12-10 17-31-45.png)
+
+![](/assets/Screenshot from 2018-12-10 17-31-57.png)
+
+![](/assets/Screenshot from 2018-12-10 17-32-13.png)
