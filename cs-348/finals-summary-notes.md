@@ -205,3 +205,170 @@
     - **UNDO rule** - a log record for an update is written to log disk before the corresponding data is written to the main disk
     
     - **REDO rule** - all log records for a transaction are written to log disk before commit
+    
+## Database Tuning
+
+- **Physical Design** - the process of selecting a physical schema (collection of data structures) to implement the conceptual schema
+
+- **Tuning** - periodically adjusting the physical and/or conceptual schema of a working system to adapt to changing requirements and/or performance characteristics
+
+### Workload
+
+- **Workload Description**
+    - The most important queries and their frequency
+    - The most important updates and their frequency
+    - The desired performance goal for each query or update
+    
+    
+##### Example
+
+- Query
+    - which relations are accessed
+    - which attribute are retrieved
+    - which attributes occur in selection/join conditions? how selective is each condition
+    
+
+- Update
+    - Type of update and relations/attributes affected
+    - Which attributes occur in selection/join conditions? How selective is each condition
+    
+    
+### Tuning
+- Make a set of application execute as fast as possible
+
+
+### Overheads
+
+##### Table Scan
+
+- e.g. SELECT blocks will require DBMS to search the blocks of the database to find a match
+- Assuming not sorted, all blocks of the file must be scanned if the entry is not found
+
+##### Creating Indexes
+
+- Substantially reduce execution time for selection
+- Increase execution for insertions
+- Increase or decrease execute time for updates or deletions
+- Increase required space
+
+
+##### Clustering vs. Non-clustering Indexes
+
+-  relation may have at most one clustering index, and any number of non-clustering indices
+
+##### Co-Clustering Relations
+
+- Two relations are co-clustered if their tupes are interleaved within the same file
+
+- Can speed up joins (particularly foreign key joins)
+- Sequential scans of either relation become slower
+
+##### Range Queries
+- B-trees can help for range queries
+    - Using forward pointers in the leaf blocks when finding the first qualifying entry
+    
+    
+##### Multi-Attribute Indices
+
+- It is possible to create an index on several attributes of the same relation
+
+- e.g. `CREATE INDEX NamerIndex ON Employee(Lastname,Firstname)`
+
+- order matters
+- ordered first by Lastname, then Firstname
+
+### More Complex Designs
+
+##### Multi-Attribute Indices
+
+- Complex search/join conditions
+- Join indices
+- Materialized views
+
+##### Join indices
+
+- Allow replacing joins by index looups
+
+##### Materialized views
+
+- Allow replacing subqueries by index lookups
+
+
+### Physical Design Guidelines
+
+1. Use index only if performance increase outweighs update overhead
+
+2. Attributes mentioned in WHERE clauses are candidates for index search keys
+
+3. Multi-attribute search keys should be considered when
+    - A WHERE clause contains several conditions
+    - Enables index-only plans
+ 
+       
+4. Choose indexes that benefit as many as queries as possible
+
+5. Each relation can have at most one clustering theme; therefore choose it wisely
+    - Target important queries that would benefit the most
+        - Range queries benefit the most from clustering
+        - Join queries benefit the most from co-clustering
+
+    - A multi-attribute index that enables an index only plans does not benefit from being clustered
+    
+### Index Selection and Tools
+
+- Convert physical design into another optimization problem
+
+### Tuning Conceptual Design
+
+- To avoid expensive operations in query execution
+- Retrieve related data in fewer operations
+
+##### Techniques
+
+- Alternative normalization/weaker form
+- Co-clustering of relations
+- Vertical/horizontal partitioning of data
+- Avoiding concurrency hot-spots
+
+
+### Denormalization
+
+- **Normalization** - the process of decomposing schema to reduce redundancy
+
+- **Denormalization** - the process of merging schema to intentionally increase redundancy
+
+- Redundancy increase update overhead but decreases query overhead
+
+### Partitioning
+
+- Splitting a table into multiple tables for the purpose of reducing I/O cost or lock contention
+
+- **Horizontal Partitioning**
+    - Each partition has all original columns and subset of original rows
+    - Often used to separate operational from archival data
+    
+
+- **Vertical Partitioning**
+    - Each partition has a subset of the original columns and all the original rows
+    
+    - Used to separate frequently used columns from each other
+    
+### Tuning Queries
+
+1. Sorting is expensive. Avoid unnecessary uses of ORDER BY, DISTINCT or GROUP BY
+2. Whenever possible, replace subqueries with joins
+3. Whenever possible, replace correlated subqueries with uncorrelated subqueries
+4. Use vendor-supplied tools to exmaine generated plan. update and/or create statistics if poor plan is due to poor cost estimation
+
+### Tuning Applications
+
+1. Minimize communication costs
+    - Return the fewest columns and rows necessary
+    - Update multiple rows with a WHERE clause 
+    
+2. Minimize lock contention and hot-spots
+    - Delay updates as long as possible
+    - Delay operation son hot-spots as long as possible
+    - Shorten or split transactions as much as possible
+    - Perform insertions/updates/deletions in batches
+    - Consider lower isolation levels
