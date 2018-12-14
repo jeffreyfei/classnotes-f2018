@@ -1,4 +1,31 @@
 # Finals Summary Notes
+
+## Normal Forms
+
+#### 1NF
+- Column of a table cannot hold multiple values
+- Only hold atomic values
+
+#### 2NF
+- Table is in 1NF
+- If a candidate key has multiple attributes, then part of that candidate key cannot determine anything
+
+    e.g.
+    
+    AB -> C
+    A -> D
+    B -> E
+    
+- We can see that in this case AB is a candidate key, however subset in AB is used to determine other attributes. Therefore the above relation is not in 2NF
+
+#### 3NF
+
+- No _transitive dependency_
+
+#### BNCF
+
+- In a non trivial relation X->Y, X must be a superkey
+
 ## Optimization
 
 - **Clustering index** - tuples in the relation with similar values for A are stored together in the same block
