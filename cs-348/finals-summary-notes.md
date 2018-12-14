@@ -1,6 +1,14 @@
 # Finals Summary Notes
 
-## Normal Forms
+## Functional Dependency
+
+#### Dependency Preserving
+
+- A decomposition is dependency preserving if the decomposed relations $$F_1, F_2, ..., F_n$$, which corresponds to $$R_1, R_2,...,R_n$$ encompasses all the relations in $$F$$
+
+#### Lossless Join
+
+- If joining the decomposed relations can yield the same relations in the original table
 
 #### 1NF
 - Column of a table cannot hold multiple values
@@ -25,6 +33,7 @@
 #### BNCF
 
 - In a non trivial relation X->Y, X must be a superkey
+
 
 ## Optimization
 
