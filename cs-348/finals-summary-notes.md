@@ -89,6 +89,10 @@
 - Multiple mass storage units
 - Relational operators amenable to parallel execution
 
+## Relational Algebra
+
+- Relational Calculus can always be evaluated to relational algebra
+
 ## Concurrency
 
 ### ACID Requirements
