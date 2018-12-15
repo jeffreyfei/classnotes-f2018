@@ -104,3 +104,25 @@
 ### Precedence Graph
 
 - Displays dependencies on of blocks of code
+
+### Unbounded Buffer
+
+- Two task communicate through a queue of unbounded length
+
+
+- Producer never has to wait as buffer has infinite length
+- Consumer has to wait if buffer is empty - wait for producer to add
+
+### Bounded Buffer
+
+- Two tasks communicate through a queue of bounded length
+
+
+- Producers has to wait if buffer is full (wait for consumer to remove)
+- Consumer has to wait if buffer is empty (wait for producer to add)
+
+### Lock Techniques
+
+#### Split Binary Semaphore
+
+- A collection of semaphores where at most one of the collection has the value 1
