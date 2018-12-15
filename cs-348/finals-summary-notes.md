@@ -2,6 +2,12 @@
 
 ## Functional Dependency
 
+#### Armstrong's Axioms
+
+- **Reflexivity** $$Y\subseteq X \Rightarrow X\rightarrow Y$$
+- **Augmentation** $$X\rightarrow Y\Rightarrow XZ\rightarrow YZ$$
+- **Transitivity** $$X\rightarrow Y, Y\rightarrow Z\Rightarrow X\rightarrow Z$$
+
 #### Dependency Preserving
 
 - A decomposition is dependency preserving if the decomposed relations $$F_1, F_2, ..., F_n$$, which corresponds to $$R_1, R_2,...,R_n$$ encompasses all the relations in $$F$$
@@ -9,6 +15,15 @@
 #### Lossless Join
 
 - If joining the decomposed relations can yield the same relations in the original table
+
+### Compute Min Cover
+
+1. Replace $$X\rightarrow YZ$$ with the pair $$X\rightarrow Y$$ and $$X\rightarrow Z$$
+2. Remove $$X\rightarrow A$$ from F if $$A\in ComputeX^+(X, F-\{X\rightarrow A\})$$
+    - Remove the relation if there is an alternative path
+3. Remove A from the left hand side of $$X\rightarrow B$$ if $$B$$ is in $$ComputeX^+(X-\{A\}, F)$$
+    - Remove unneccesary component sfrom the left side
+4. Reverse 1
 
 #### 1NF
 - Column of a table cannot hold multiple values
