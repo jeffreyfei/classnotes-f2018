@@ -220,3 +220,87 @@
 - **Mutex member** - does not begin execution if there is another active mutex member
   - Can be blocked on entry into a waiting queue
   - Public members of a monitor is implicitly a mutex member, other members can be explicitly declared as a mutex member
+- Exceptions within a monitor always release implicit monitor locks
+- Destructor is mutex, therefore deleting a dynamically allocated monitor will block if there exists an active thread in the monitor
+  - Useful for termination detection
+  
+### Scheduling
+- There are two techniques for scheduling
+
+#### External
+  - schedules tasks outside the monitor; accomplished using the `_Accept` statement
+  - the `_Accept` statement controls which mutex member can accept calls
+  
+
+  - A queue of tasks blocks outside the monitor waiting to be accepted
+  - The acceptor blocks until a call to the specified mutex member occurs
+    - Can form a stack of blocked acceptors
+  - Acceptor resumes when the mutex member exists or gets blocked
+  
+#### Internal
+  - schedules tasks inside the monitor; accomplished using condition variables (signal / wait)
+    - A condition is a queue of waiting tasks
+    
+  - `empty()` - returns true of the queue is empty; false otherwise
+  - `wait()` - the current task blocks
+  - `signal()` - Unblocks the task in front of the waiting queue
+    - Does not block
+    - The waiting task is unblocked after the signaler thread blocks or exists
+  - `signalBlock()` - Same as `signal()` but blocks the signaler when called
+    - Allowing the waiting task to execute first
+    
+#### Summary
+- External is generally easier to use, but cannot be used if
+  - Scheduling depends on a member parameter value
+  - Scheduling must block in the monitor but cannot guarantee the next call fulfils cooperation
+  
+- **Nested monitor problem** - acquire monitor $$M_1$$, call to monitor $$M_2$$ and wait on a condition in $$M_2$$
+  - Condition in $$M_2$$ is released by wait, but monitor lock in $$M_1$$ is not released. Potential deadlock.
+  
+- Differences to a counting semaphore
+  - `wait()` always blocks, not the case for `P()`
+  - `signal()` can be lost if nothing is waiting on the condition, not the case for `V()`
+  - Multiple `V()` starts tasks simultaneously while multiple `signal()` does not
+    - As each task must exit serially through the monitor
+  
+### Monitor Types
+
+ ![](/assets/Screenshot from 2018-12-15 23-09-32.png) 
+ 
+ - Either explicit or automatic signal
+ - Has waitUntil _condition_
+ 
+ #### Other Types and Priorities
+ 
+ ![](/assets/Screenshot from 2018-12-15 23-12-51.png)
+ 
+ ##### No-priority blocking
+ - Signaller task recheck the waiting condition for barging task
+ - While loop around signal
+ 
+ ##### No-priority non-blocking
+ - Signalled task recheck the waiting condition for barging task
+ - While loop around wait
+ 
+ ##### Implicit Signal (automatic)
+ - Good for prototyping but poor performance
+ 
+ ##### Priority non-blocking
+ - No barging
+ - Optimizes signal before return
+ 
+ ##### Priority blocking
+ - No barging
+ - handles internal cooperation within the monitor
+ 
+ ### Cormonitor
+ 
+ - Same as monitor, but has a `main()` function and can use `resume()` and `suspend()`
+ 
+### Java Monitor
+
+- Java has synchronized class members and a synchronized statement (mutex members)
+
+- Internal scheduling is no-priority non-blocking => barging
+
+## Direct Communication
