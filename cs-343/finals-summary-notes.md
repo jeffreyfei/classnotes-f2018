@@ -431,3 +431,93 @@ result = callee.wait();
   - Executed when future becomes available, blocks otherwise
   - Functions similarly to `_Accept()`
   - Can be used in conjunction with `or`, `_Else{}`, `_When()`, `and`
+  
+## Optimization
+
+#### General Forms for Optimization
+
+- **Reordering** - data and code are reordered increase performance in certain contexts
+- **Eliding** - removal of unnecessary data, data accesses, and computation
+- **Replication** - processors, memory, data, code are duplicate because of limitation in processing and communication speed
+
+- Optimized program must be _isomorphic_ to original => produce same result for fixed input
+
+### Sequential Optimization
+
+1. Reorder disjoint (independent) operations
+2. Elide unnecessary operations
+3. Execute in parallel if multiple functional units
+
+### Memory Hierarchy
+
+#### Caching
+
+- Move data from memory to registers for as long as possible and back to memory
+- Compilers try to keep highly accessed data in registers
+- Use hardware cache to stage data without pushing to memory and allow sharing of data among programs
+
+- **Cache line** - the size of the block that cache can load data (64/128/256)
+
+#### Cache Coherence
+- **Cache coherence** - hardware protocol ensuring update of duplicate data
+  - Since variable data can be replicated in a large number of locations
+  
+  
+  
+- **Cache consistency** - addresses when processor sees update => bidirectional synchronization
+  - **Eager data consistency** - data changes appear instantaneous by waiting for acknowledge from all cores
+  - **Lazy data consistency** - reader to see own write before acknowledgement
+  
+  
+- **Cache thrashing** - excessive cache updates caused by continually read/write the same memory locations
+- **False sharing** - when thrashing occur inadvertently due to multiple variables using the same cache line
+
+
+### Concurrent Optimizations
+
+- Sequential sections accessing private variables can be optimized normally but not across concurrent boundaries
+
+#### Disjoint Reordering
+
+- Orders of operations that are disjoint can be altered
+- Compilers uses the technique to break mutual exclusion
+  - e.g. Move lock entry/exit after/before critical section because entry/exit variables not used in critical section
+  
+#### Eliding
+
+- Elide reads by replicating value into register
+- Variable logically disappears for duration in register
+  - Since reading directly from register is more efficient
+
+#### Replication
+
+Processor Execution Steps:
+
+1. Internal pool of instructions taken from program order
+2. Begin simultaneous execution of instructions with inputs
+3. Collect results from finished instructions
+4. Feed results back into instruction pool as inputs
+5. Instructions with independent input execute out of order
+
+- **Double-check locking** - check the same condition before and after acquiring the lock
+
+
+### Optimization Problems
+
+- Locks effect efficiency
+  - Locks define the sequential/concurrent boundaries
+  - Boundaries must preclude optimizations that affect concurrency
+  
+  
+- **Race free** - when synchronization and mutual exclusion preclude races
+
+
+- Two approaches
+  - **Adhoc** - manually augments all data races with pragmas to restrict compiler/hardware optimizations
+    - Not portable but often optimal
+  - **Formal** - language has memory model and mechanisms to abstractly define races in program
+    - Portable but often suboptimal
+    
+    
+- `volatile` qualifier in C/C++
+  - Force variable loads and stores to registers (At sequence points)
