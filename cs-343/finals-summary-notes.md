@@ -521,3 +521,71 @@ Processor Execution Steps:
     
 - `volatile` qualifier in C/C++
   - Force variable loads and stores to registers (At sequence points)
+  
+## Other Approaches (Optimization)
+
+- **Lock free data structure** - data structure with operations in the critical section but performed without ownership
+- Should be called **wait free** instead
+
+### CAA
+- compare-and-assign (CAA) and compare-and-swap (CAS) performs atomic and conditional assignment
+
+- Returns true if operation is successful, false otherwise
+
+### Lock Free Stack
+- Use CAA to perform push operations (assign node to top)
+- Perform CAA in a loop until it succeeds
+
+### ABA Problem
+
+1. Stack A -> B -> C
+2. Perform `pop()`
+3. A and B are dereferenced and set as args for `CAA`
+4. It gets time sliced before `CAA` and A B gets poped and A gets pushed back, we now have A -> C
+5. Performs CAA with arg A, B. Stack bcame top -> B, stack corrupted
+
+
+- Can attempt a hardware fix
+  - Use double-wide CAVD instruction
+  - Use a counter on each node to determine whether A is changed while the current task is time sliced
+  - Only probabilistic correct as counter is finite
+  
+  
+- Hazard pointer solution
+  - A list of references of accessed nodes
+  - Threads update hazard pointer while other threads are reading them
+  - Node hidden on a private list
+  - Threads scans the list of other threads to see if the node exists
+  - If no pointers are found the node can be freed
+  - If pointer is on a hazard list, the thread has to create the object at different location
+  
+### Exotic Atomic Instruction
+
+- VAX Computer can insert/remove node to/from a circular doubly linked list atomically
+
+- MIPS has LL (lad locked) and SC (store conditional) which generalize atomic read/write cycle
+  - LL reads a value from memory and set a hardware reservation
+  - SC stores a new value back to original or another memory location
+    - Can only occur if no iterrupt, exception, or write at LL reservation
+    
+    
+- Hardware Transactional Memory allows 4, 6, 8 transactions
+- Software Transactional Memory (STM) allows any number of reservations
+
+
+### General Purpose GPU
+
+- Single-Instruction Multiple-Data (SIMD) vs. Multiple Instruction Multiple-Data (MIMD)
+  - SIMD - one instruction spawns into multiple data manipulation
+  - MIMD - multiple instructions
+  
+#### GPU Structure
+
+- **Kernel** - manages multiple blocks
+- **Block** - executes the same code
+- **Warp** - synchronizes execution
+- **Thread** - computes value
+
+
+- Large register file used to optimize throughput
+- Kernel is memory-bound
