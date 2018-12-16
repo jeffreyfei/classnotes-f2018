@@ -589,3 +589,83 @@ Processor Execution Steps:
 
 - Large register file used to optimize throughput
 - Kernel is memory-bound
+
+## Concurrent Languages
+
+### Ada 95
+- Has `when`, `select`, `accept` clause
+- `when` expression can contain only global-object variables
+- `select` is external scheduling
+
+### SR/Concurrent C++
+- Tasks with external scheduling using accept statement
+- No condition variables or requeue statement
+- `when` placed after `accept`
+- `by` clause is calculated for each true `when` clause and the minimum `by` clause is elected
+
+
+- Has problems with multiple `select` conditions
+
+### Java
+- Threads
+- Starts in member `run`
+- Require explicit starting by calling `start`
+- Termination synchronization accomplished by calling `join`
+- When task thread terminates it becomes an object
+
+
+- No mechanism to manages direct calls
+- Complex emulation of external scheduling with internal scheduling for direct communication
+
+
+### Go
+- Non-preemptive threads (goroutine)
+- `go` statement creates new user thread running in routine
+  - Can accept parameter by return value discarded
+- Threads communicate through channel
+  - Channel has a buffer size
+  - Blocks when empty
+  
+### C++11
+- Has strong memory-model (SC)
+- Thread starts implicit at point of declaration
+- Thread can run independently by detaching (instead of join)
+  - Error when deallocating thread object before join or detach
+- Locks
+  - Mutex, recursive, timed, recursive-timed
+  - Condition
+- **No-priority nonblocking** for scheduling
+- Has futures
+
+## Threads & Locks Library
+### java.util.concurrent
+- Sound with memory-model
+- Language is concurrent aware
+- Scheduling is no-priority nonblocking  
+  - Barging
+  - Wait in while loop
+- No connection with implicit condition variable of an object
+
+- **Executor** - a server with one or more worker tasks
+- **Future** - closure with work for executor
+  - Result retrieved using get routine from future
+  
+  
+### Pthreads
+- Threads starts in routine `start_func` via `pthread_create`
+- Termination synchronization performed with `pthread_join`
+- No external scheduling
+- Internal scheduling is no-priority nonblocking
+  - Barging
+  - Wait statements must be in while loop
+- All locks must be initialized and finalized
+- Mutual exclusion must be explicitly defined where needed
+- Condition locks should only be accessed with mutual exclusion
+
+## Open MP
+
+- Shared memory, implicit thread managment, 1-to-1 threading model, some explicit locking
+- Fork/join model
+  - **fork** - initial thread creates a team of parallel threads
+    - Each thread executes the statement in the region construct
+  - **join** - when team threads complete, synchronize and terminate, except initial thread which continues
