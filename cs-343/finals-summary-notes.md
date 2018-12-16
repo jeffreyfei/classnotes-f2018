@@ -349,3 +349,85 @@
 - When the destructor is accepted, the caller is blocked and moved to the A/S stack instead of the acceptor
   - Control returned to the accept statement instead of the destructor member
   - Allows mutex to cleanup before termination
+  
+### Increase Concurrency
+
+#### Client-server
+
+- The server is a task with a running `main()` function
+- Clients are tasks that calls the member functions of the server
+
+- We should try to put as much work in the `main()` function as possible instead of within the member functions
+  - Since mutex members block, by doing less work, we allow more clients to access the member functions
+  
+#### Internal Buffer
+
+- The requests from clients can be inserted into an internal buffer
+- We know that no members can be called when the server is working
+- Add a worker thread to get work from the buffer and return results to the buffer
+  - Multiple works is also possible
+    - Balanced with the number of clients to maximize concurrency (bounded buffer problem)
+    
+#### Administrator
+
+- A server managing multiple clients and worker tasks
+- Does little to no work
+- Called by others
+- Keeps a buffer of work to pass to the worker tasks
+
+##### Kinds of Workers
+
+- **Timer**
+- **Notifier** - performs potential blocking wait for an external event
+- **Simple worker** - receive work and return result to admin
+- **Complex worker** - receive work and interact directly with client
+- **Courier** - Perform potentially blocking call for the admin
+
+##### Client
+- Sometimes the client does not have to wait for the server to process a request
+  - Can be performed via an async call to the server
+  - Requires a implicit buffer to store the arguments of the call
+
+##### Returning Values
+- Must be split into two calls
+
+```
+callee.start(args);
+// do something
+
+result = callee.wait();
+```
+
+- In the assignment this is done by returning a future
+
+**Some techniques**:
+
+- **Tickets** - the caller passes in the ticket to retrieve the result
+  - Result is stored in some kind of data structure
+  - Caller may not obey the protocol (passing in bogus ticket)
+  
+- **Callback routine** - register a routine in the initial call
+  - The routine is called with the result when the work is complete
+  
+- **Futures** - an data structure that provides asynchrony required in this problem
+  - When the future is not fulfilled (work not completed), think of it as a phony value to make the caller thinks that the call is completed
+  - When the caller tries to obtain results from an empty future, the caller blocks
+  - When the result is calculated, then the future is fulfilled by the callee. As soon as this happens, the caller gets unblocked
+  
+##### UC++ Implementation of futures
+
+`Future_ESM<T>` - must be allocated and deallocated by the client
+`Future_ISM<T>` - automatically allocates and deallocates storage
+
+`Future_ISM<int> f; f();` - try to access result, blocks if not available
+  - Raise exception if exception raised by server
+`available()` - true if results available; false otherwise
+`reset()` - mark future as empty
+`cancel()` - cancels the async call that the future refers to
+`cancelled()` - true if the future is cancelled; false otherwise
+
+
+`_Select(future) {}` can be used to wait on future access
+  - Executed when future becomes available, blocks otherwise
+  - Functions similarly to `_Accept()`
+  - Can be used in conjunction with `or`, `_Else{}`, `_When()`, `and`
