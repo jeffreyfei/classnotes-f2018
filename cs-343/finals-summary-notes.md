@@ -1,5 +1,18 @@
 # Finals Summary Notes
 
+## Some Execution Properties
+
+![](/assets/Screenshot from 2018-12-15 23-30-28.png)
+
+## Some Syntax
+
+`_Accept(member1, member2, ...)`
+`When(cond) _Accept(..)` - Condition for the critical region, works like if
+`_Accept(mem1) or _Accept(mem2)` or condition for accept, unblocked if one of the member is called
+`_Accept(mem1) {} _Else{}` - executes Else if no task waiting to be accepted
+
+## Locks
+
 ### Blocking Locks
 
 * Acquiring task makes one check for open locks and blocks
@@ -227,6 +240,9 @@
 ### Scheduling
 - There are two techniques for scheduling
 
+##### General Model of Monitor Members
+![](/assets/Screenshot from 2018-12-15 23-38-33.png)
+
 #### External
   - schedules tasks outside the monitor; accomplished using the `_Accept` statement
   - the `_Accept` statement controls which mutex member can accept calls
@@ -270,30 +286,30 @@
  - Either explicit or automatic signal
  - Has waitUntil _condition_
  
- #### Other Types and Priorities
+#### Other Types and Priorities
  
  ![](/assets/Screenshot from 2018-12-15 23-12-51.png)
  
- ##### No-priority blocking
+##### No-priority blocking
  - Signaller task recheck the waiting condition for barging task
  - While loop around signal
  
- ##### No-priority non-blocking
+##### No-priority non-blocking
  - Signalled task recheck the waiting condition for barging task
  - While loop around wait
  
- ##### Implicit Signal (automatic)
+##### Implicit Signal (automatic)
  - Good for prototyping but poor performance
  
- ##### Priority non-blocking
+##### Priority non-blocking
  - No barging
  - Optimizes signal before return
  
- ##### Priority blocking
+##### Priority blocking
  - No barging
  - handles internal cooperation within the monitor
  
- ### Cormonitor
+### Cormonitor
  
  - Same as monitor, but has a `main()` function and can use `resume()` and `suspend()`
  
@@ -304,3 +320,32 @@
 - Internal scheduling is no-priority non-blocking => barging
 
 ## Direct Communication
+
+### Task
+- Has `main()` with its own execution state
+- Has a thread of control
+  - `main()` executes immediately after the task's creation
+- Provides mutual exclusion like a monitor
+  - Only one active thread within the object at a time
+  - Public members are implicitly mutex
+  - External scheduling allows direct call to mutex members
+  
+### Scheduling
+
+#### External
+- Can use `_Accept()` like monitors
+
+- **Exceptions** in a task member propagates to the caller
+
+#### Internal
+- `wait()` and `signal()` are used like monitors
+
+#### Accepting Destructor
+- A common way to stop tasks (e.g. when you have an infinite loop in `main()`
+- by deleting the task object, it calls the destructor, which will be accepted
+
+
+- When the destructor is called, the caller is blocked
+- When the destructor is accepted, the caller is blocked and moved to the A/S stack instead of the acceptor
+  - Control returned to the accept statement instead of the destructor member
+  - Allows mutex to cleanup before termination
